@@ -1,1 +1,233 @@
+html {
+  padding: 0; 
+  margin: 0; 
+}
 
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+.header {
+  height: 200px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  padding: 30px 10px;
+}
+
+.header h1 {
+  font-size: 6em;
+  margin: 0;
+  font-weight: bold;
+}
+
+.header h3 {
+  font-size: 2em;
+  margin: 5px 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-weight: normal;
+}
+
+.header h4 {
+  font-size: 1.5em;
+  margin: 5px 0;
+  opacity: 0.7;
+  font-weight: lighter; 
+}
+
+.topnav {
+  width: 100%; 
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  display: flex;
+  justify-content: space-evenly;   /* space out items evenly */
+  align-items: center;
+  background: linear-gradient(135deg, #007AFF 0%, #5856D6 100%);
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.topnav button {
+  flex: 1;                         /* all buttons take equal width */
+  text-align: center;
+  padding: 14px 0;                 /* vertical spacing */
+  font-size: 18px;
+  background: none;                /* remove background (inherits parent gradient) */
+  border: none;                    /* remove default button borders */
+  color: white;                    /* make text visible on gradient */
+  cursor: pointer;                 /* show pointer on hover */
+  font-family: inherit;            /* match header font */
+  transition: all 0.3s ease;       /* smooth hover effect */
+}
+
+.topnav button:hover {
+  color: lightgray;                /* hover color */
+}
+
+.topnav button.active {
+  font-weight: bold;
+  color:#007AFF;                   /* highlight text */
+  background: white;               /* active button background */
+  border-radius: 4px;              /* slight rounded feel */
+}
+
+.content {
+  display: flex;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.topnav button.active {
+  font-weight: bold;
+  color: #007AFF;
+  background: white;
+  border-radius: 4px;
+}
+
+.left {
+  display: flex;
+  align-items: flex-start; 
+  gap: 20px;              
+}
+
+.image-box img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.text-box {
+  flex: 1; 
+}
+
+#myProgress {
+  width: 100%;
+  background-color: grey;
+  border-radius: 25px;
+}
+
+#myBar {
+  width: 1%;
+  height: 30px;
+  background-color: #007AFF;
+  border-radius: 25px;
+}
+
+div.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+div.scroll-container img {
+  padding: 10px;
+}
+
+
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #007AFF
+}
+
+.container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 100%; 
+  height: 25px; 
+  background: #d3d3d3; 
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+
+.slider:hover {
+  opacity: 1; 
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  background: #007AFF; 
+  cursor: pointer; 
+}
+
+.slider::-moz-range-thumb {
+  width: 25px; 
+  height: 25px; 
+  background: #007AFF; 
+  cursor: pointer; 
+}
+
+#myBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#myBtn:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
